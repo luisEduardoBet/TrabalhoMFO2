@@ -71,6 +71,9 @@ string sell_investment(BankState &bank_state, string seller,int investment_id) {
   
   if (bank_state.investments.count(investment_id) == 0){
     return "No investment with this id";
+  }
+  else if(bank_state.investments[investment_id].owner !=  seller){
+    return "Seller can't sell an investment they don't own";
   }; 
 
   
