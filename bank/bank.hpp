@@ -28,6 +28,9 @@ string withdraw(BankState &bank_state, string withdrawer, int amount) {
 
   if(bank_state.balances[withdrawer] < amount){
     return "Balance is too low";
+  } 
+  else if(amount <= 0){
+    return "Amount should be greater than zero";
   }
 
   bank_state.balances[withdrawer] -= amount;
