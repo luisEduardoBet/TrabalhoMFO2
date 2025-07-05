@@ -71,7 +71,7 @@ void printBankMap(BankState &bank_map, string s){
 
   cout<< "investiments: [ "; 
   for(auto it: bank_map.investments){
-    cout << "{" << it.first << "," << it.second.owner << "," << it.second.amount << "},";
+    cout << "{ id:" << it.first << ", owner:" << it.second.owner << ", amount:" << it.second.amount << "},";
   }
   cout << "]" << endl;
 
