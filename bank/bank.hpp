@@ -28,8 +28,12 @@ string withdraw(BankState &bank_state, string withdrawer, int amount) {
   return "";
 }
 
-string transfer(BankState &bank_state, string sender, string receiver,
-                int amount) {
+string transfer(BankState &bank_state, string sender, string receiver, int amount) {
+  
+  if (amount <= 0){
+    return "Amount should be greater than zero";
+  } 
+  
   bank_state.balances[sender] -= amount;
   bank_state.balances[receiver] += amount;
   return "";
