@@ -47,6 +47,9 @@ string buy_investment(BankState &bank_state, string buyer, int amount) {
   if (amount <= 0){
     return "Amount should be greater than zero";
   }
+  else if(bank_state.balances[buyer] < amount){
+    return "Balance is too low";
+  }
 
   bank_state.balances[buyer] -= amount;
   bank_state.investments[bank_state.next_id] = {buyer, amount};
