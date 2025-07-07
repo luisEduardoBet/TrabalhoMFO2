@@ -77,7 +77,6 @@ void printBankMap(BankState &bank_map, string s){
 
   cout << "next_id: " << bank_map.next_id << endl; 
 
-
 }
 
 
